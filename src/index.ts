@@ -4,6 +4,7 @@ import { Request, Response } from 'express';
 import { NextFunction } from 'connect';
 import cors = require('cors');
 import * as bodyParser from 'body-parser';
+import Res from './Util/response';
 
 
 // Set the local PORT and prod PORT
@@ -24,7 +25,7 @@ server.app.use(router);
 
 // If the route do no exist, this will handle it!
 server.app.use((req: Request, res: Response, next: NextFunction): Response => {
-    return res.status(404).send({ "success": false, "message": 'sorry cant find that!', "data": null });
+    return res.status(404).send(Res.RES(false, null, 'Not Found it...'));
 });
 
 // start the express server
