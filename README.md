@@ -27,6 +27,13 @@ tsc
 This command line will compile all the typescript file inside the src folder and it will compiled in a folder named 'dist'
 
 
+Them you have to install nodemon dependecy library globally to run the project. Use this command line:
+
+```sh
+npm install -g nodemon
+```
+
+
 And finally to run this REST API, you have to run this command line:
 
 ```sh
